@@ -24,6 +24,8 @@ def emotions_detector(img_array):
         im = np.float32(face)
         im = np.expand_dims(im, axis=0)
 
+        time_elapsed_preprocessing = f'{time.time() - time_init:.4f} secs'
+
         # Inference by passing the face to the model
         onnx_pred = main.model.run(['dense'], {'input_image': im})
 
@@ -31,10 +33,10 @@ def emotions_detector(img_array):
         class_names = ['angry', 'happy', 'neutral', 'sad', 'surprised']
         emotion = class_names[np.argmax(onnx_pred[0][0])]
 
-    time_elapsed_preprocessing = f'{time.time() - time_init:.4f} secs'
-    time_elapsed = f'{time.time() - time_init:.4f} secs'
 
-    return {'emotion': emotion,
-            'time_elapsed_preprocessing': str(time_elapsed_preprocessing),
-            'time_elapsed': str(time_elapsed)
-            }
+        time_elapsed = f'{time.time() - time_init:.4f} secs'
+
+        return {'emotion': emotion,
+                'time_elapsed_preprocessing': str(time_elapsed_preprocessing),
+                'time_elapsed': str(time_elapsed)
+                }
