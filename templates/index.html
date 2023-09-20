@@ -81,16 +81,17 @@
                 })
                 .then(response => response.json())
                 .then(data => {
-                    const resultElement = document.getElementById('result');
-                    const htmlContent = `
-                        <p><strong>Emotion:</strong> ${data.emotion}</p>
-                        <p><strong>Time Elapsed (Preprocessing):</strong> ${data.time_elapsed_preprocessing} seconds</p>
-                        <p><strong>Time Elapsed:</strong> ${data.time_elapsed} seconds</p>
-                    `;
-                    resultElement.innerHTML = htmlContent;
-                    typingAnimationElement.style.display = 'none';
-                    resultSection.style.display = 'block';
-                })
+    const resultElement = document.getElementById('result');
+    const htmlContent = `
+        <p><strong>Emotion:</strong> ${data.emotion}</p>
+        <p><strong>Time Elapsed (Preprocessing):</strong> ${data.time_elapsed_preprocessing} seconds</p>
+        <p><strong>Time Elapsed:</strong> ${data.time_elapsed} seconds</p>
+    `;
+    resultElement.innerHTML = htmlContent;
+    typingAnimationElement.style.display = 'none';
+    resultSection.style.display = 'block';
+})
+
                 .catch(error => {
                     console.error('Error:', error);
                     typingAnimationElement.style.display = 'none';
