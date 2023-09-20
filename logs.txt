@@ -1,0 +1,581 @@
+(Emotion_detection_fastapi) boss@Bosss-iMac Emotion_detection_fastapi % uvicorn service.main.py
+ERROR:    Error loading ASGI app. Import string "service.main.py" must be in format "<module>:<attribute>".
+(Emotion_detection_fastapi) boss@Bosss-iMac Emotion_detection_fastapi % uvicorn "service.main.py"
+ERROR:    Error loading ASGI app. Import string "service.main.py" must be in format "<module>:<attribute>".
+(Emotion_detection_fastapi) boss@Bosss-iMac Emotion_detection_fastapi % uvicorn service.main:app --reload
+INFO:     Will watch for changes in these directories: ['/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [41519] using WatchFiles
+INFO:     Started server process [41521]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52607 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52607 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52608 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52608 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52608 - "GET /openapi.json HTTP/1.1" 200 OK
+4
+INFO:     127.0.0.1:52611 - "POST /detect HTTP/1.1" 200 OK
+2
+INFO:     127.0.0.1:52612 - "POST /detect HTTP/1.1" 200 OK
+^CINFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [41521]
+INFO:     Stopping reloader process [41519]
+(Emotion_detection_fastapi) boss@Bosss-iMac Emotion_detection_fastapi % pip freeze > requirements.txt
+(Emotion_detection_fastapi) boss@Bosss-iMac Emotion_detection_fastapi % uvicorn service.main:app --reload
+INFO:     Will watch for changes in these directories: ['/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [43083] using WatchFiles
+INFO:     Started server process [43085]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52643 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52645 - "GET / HTTP/1.1" 200 OK
+^CINFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [43085]
+INFO:     Stopping reloader process [43083]
+(Emotion_detection_fastapi) boss@Bosss-iMac Emotion_detection_fastapi % uvicorn service.main:app --reload
+INFO:     Will watch for changes in these directories: ['/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [48322] using WatchFiles
+INFO:     Started server process [48324]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52773 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52774 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52774 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52774 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52775 - "POST /detect HTTP/1.1" 415 Unsupported Media Type
+0
+INFO:     127.0.0.1:52776 - "POST /detect HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/applications.py", line 292, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/routing.py", line 291, in app
+    content = await serialize_response(
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/routing.py", line 154, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'int_parsing', 'loc': ('response', 'emotion'), 'msg': 'Input should be a valid integer, unable to parse string as an integer', 'input': 'angry', 'url': 'https://errors.pydantic.dev/2.3/v/int_parsing'}
+
+WARNING:  WatchFiles detected changes in 'service/core/schemas/output.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48324]
+INFO:     Started server process [48445]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52777 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52777 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52778 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48445]
+INFO:     Started server process [48574]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48574]
+INFO:     Started server process [48604]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52782 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52782 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52783 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48604]
+INFO:     Started server process [48679]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52784 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52784 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52785 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48679]
+INFO:     Started server process [48747]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'service/core/schemas/output.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48747]
+INFO:     Started server process [48787]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52786 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52786 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52787 - "POST /detect HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/applications.py", line 292, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/routing.py", line 291, in app
+    content = await serialize_response(
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/routing.py", line 154, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'missing', 'loc': ('response', 'time_elapsed'), 'msg': 'Field required', 'input': {'emotion': 'angry', 'time-elapsed': '0.18067288398742676'}, 'url': 'https://errors.pydantic.dev/2.3/v/missing'}
+
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48787]
+INFO:     Started server process [48833]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52789 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52789 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52790 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48833]
+INFO:     Started server process [48954]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52796 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52796 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52797 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48954]
+INFO:     Started server process [48993]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52798 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52798 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52799 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48993]
+INFO:     Started server process [49019]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52800 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52800 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52801 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49019]
+INFO:     Started server process [49076]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52802 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52803 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49076]
+INFO:     Started server process [49107]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52804 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52804 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52805 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49107]
+INFO:     Started server process [49234]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49234]
+INFO:     Started server process [49327]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'service/core/schemas/output.py', 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49327]
+INFO:     Started server process [49505]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52810 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52810 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52811 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49505]
+INFO:     Started server process [49564]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52812 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52812 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52813 - "POST /detect HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52814 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52814 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52816 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/core/schemas/output.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49564]
+INFO:     Started server process [49605]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52819 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52819 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52820 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/main.py', 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49605]
+INFO:     Started server process [49876]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49876]
+INFO:     Started server process [49924]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'service/core/schemas/output.py', 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49924]
+INFO:     Started server process [49999]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52824 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52824 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52825 - "POST /detect HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52826 - "POST /detect HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52826 - "POST /detect HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52826 - "POST /detect HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52826 - "POST /detect HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'service/api/endpoints/test.py', 'service/api/endpoints/detect.py', 'service/core/logic/onnx_inference.py', 'service/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49999]
+INFO:     Started server process [50462]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52835 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52835 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52836 - "POST /detect HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/applications.py", line 292, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/routing.py", line 291, in app
+    content = await serialize_response(
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/routing.py", line 154, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': <coroutine object emotions_detector at 0x135fa8b30>, 'url': 'https://errors.pydantic.dev/2.3/v/model_attributes_type'}
+
+WARNING:  WatchFiles detected changes in 'service/api/endpoints/detect.py', 'service/api/endpoints/test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [50462]
+sys:1: RuntimeWarning: coroutine 'emotions_detector' was never awaited
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+INFO:     Started server process [50535]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52837 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52837 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52840 - "POST /detect HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/applications.py", line 292, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/routing.py", line 291, in app
+    content = await serialize_response(
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/routing.py", line 154, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': <coroutine object emotions_detector at 0x11fde6490>, 'url': 'https://errors.pydantic.dev/2.3/v/model_attributes_type'}
+
+WARNING:  WatchFiles detected changes in 'service/api/endpoints/detect.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [50535]
+sys:1: RuntimeWarning: coroutine 'emotions_detector' was never awaited
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+INFO:     Started server process [50586]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52841 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52841 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52842 - "POST /detect HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/applications.py", line 292, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/routing.py", line 291, in app
+    content = await serialize_response(
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/fastapi/routing.py", line 154, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': <coroutine object emotions_detector at 0x132770b30>, 'url': 'https://errors.pydantic.dev/2.3/v/model_attributes_type'}
+
+WARNING:  WatchFiles detected changes in 'service/api/endpoints/test.py', 'service/core/logic/onnx_inference.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [50586]
+sys:1: RuntimeWarning: coroutine 'emotions_detector' was never awaited
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+INFO:     Started server process [50690]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52843 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52843 - "GET /openapi.json HTTP/1.1" 200 OK
+0
+INFO:     127.0.0.1:52844 - "POST /detect HTTP/1.1" 200 OK
+^CINFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [50690]
+INFO:     Stopping reloader process [48322]
+(Emotion_detection_fastapi) boss@Bosss-iMac Emotion_detection_fastapi % pip install gunciorn
+ERROR: Could not find a version that satisfies the requirement gunciorn (from versions: none)
+ERROR: No matching distribution found for gunciorn
+(Emotion_detection_fastapi) boss@Bosss-iMac Emotion_detection_fastapi % pip install gunicorn
+Collecting gunicorn
+  Obtaining dependency information for gunicorn from https://files.pythonhosted.org/packages/0e/2a/c3a878eccb100ccddf45c50b6b8db8cf3301a6adede6e31d48e8531cab13/gunicorn-21.2.0-py3-none-any.whl.metadata
+  Downloading gunicorn-21.2.0-py3-none-any.whl.metadata (4.1 kB)
+Requirement already satisfied: packaging in ./lib/python3.10/site-packages (from gunicorn) (23.1)
+Downloading gunicorn-21.2.0-py3-none-any.whl (80 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 2.7 MB/s eta 0:00:00
+Installing collected packages: gunicorn
+Successfully installed gunicorn-21.2.0
+(Emotion_detection_fastapi) boss@Bosss-iMac Emotion_detection_fastapi % --workers 3 --worker-class uvicorn.workers.UvicornWorker
+zsh: command not found: --workers
+(Emotion_detection_fastapi) boss@Bosss-iMac Emotion_detection_fastapi % gunicorn service.main:app --workers 3 --worker-class uvicorn.wokers.UvicornWorker
+
+Error: class uri 'uvicorn.wokers.UvicornWorker' invalid or not found:
+
+[Traceback (most recent call last):
+  File "/Users/boss/Desktop/Python_files.nosync/All_the_projects/Emotion_detection_fastapi/lib/python3.10/site-packages/gunicorn/util.py", line 111, in load_class
+    mod = importlib.import_module('.'.join(components))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'uvicorn.wokers'
+]
+
+(Emotion_detection_fastapi) boss@Bosss-iMac Emotion_detection_fastapi % gunicorn service.main:app --workers 3 --worker-class uvicorn.workers.UvicornWorker
+[2023-09-20 22:20:08 +0900] [51109] [INFO] Starting gunicorn 21.2.0
+[2023-09-20 22:20:08 +0900] [51109] [INFO] Listening at: http://127.0.0.1:8000 (51109)
+[2023-09-20 22:20:08 +0900] [51109] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2023-09-20 22:20:08 +0900] [51110] [INFO] Booting worker with pid: 51110
+[2023-09-20 22:20:08 +0900] [51111] [INFO] Booting worker with pid: 51111
+[2023-09-20 22:20:08 +0900] [51112] [INFO] Booting worker with pid: 51112
+[2023-09-20 22:20:09 +0900] [51110] [INFO] Started server process [51110]
+[2023-09-20 22:20:09 +0900] [51110] [INFO] Waiting for application startup.
+[2023-09-20 22:20:09 +0900] [51110] [INFO] Application startup complete.
+[2023-09-20 22:20:09 +0900] [51111] [INFO] Started server process [51111]
+[2023-09-20 22:20:09 +0900] [51111] [INFO] Waiting for application startup.
+[2023-09-20 22:20:09 +0900] [51111] [INFO] Application startup complete.
+[2023-09-20 22:20:09 +0900] [51112] [INFO] Started server process [51112]
+[2023-09-20 22:20:09 +0900] [51112] [INFO] Waiting for application startup.
+[2023-09-20 22:20:09 +0900] [51112] [INFO] Application startup complete.
+0
+^C[2023-09-20 22:28:37 +0900] [51109] [INFO] Handling signal: int
+[2023-09-20 22:28:37 +0900] [51111] [INFO] Shutting down
+[2023-09-20 22:28:37 +0900] [51111] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2023-09-20 22:28:37 +0900] [51112] [INFO] Shutting down
+[2023-09-20 22:28:37 +0900] [51110] [INFO] Shutting down
+[2023-09-20 22:28:37 +0900] [51112] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2023-09-20 22:28:37 +0900] [51110] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+[2023-09-20 22:28:37 +0900] [51111] [INFO] Waiting for application shutdown.
+[2023-09-20 22:28:37 +0900] [51111] [INFO] Application shutdown complete.
+[2023-09-20 22:28:37 +0900] [51111] [INFO] Finished server process [51111]
+[2023-09-20 22:28:37 +0900] [51111] [INFO] Worker exiting (pid: 51111)
+[2023-09-20 22:28:37 +0900] [51112] [INFO] Waiting for application shutdown.
+[2023-09-20 22:28:37 +0900] [51110] [INFO] Waiting for application shutdown.
+[2023-09-20 22:28:37 +0900] [51112] [INFO] Application shutdown complete.
+[2023-09-20 22:28:37 +0900] [51112] [INFO] Finished server process [51112]
+[2023-09-20 22:28:37 +0900] [51110] [INFO] Application shutdown complete.
+[2023-09-20 22:28:37 +0900] [51110] [INFO] Finished server process [51110]
+[2023-09-20 22:28:37 +0900] [51112] [INFO] Worker exiting (pid: 51112)
+[2023-09-20 22:28:37 +0900] [51110] [INFO] Worker exiting (pid: 51110)
+[2023-09-20 22:28:37 +0900] [51109] [INFO] Shutting down: Master
+(Emotion_detection_fastapi) boss@Bosss-iMac Emotion_detection_fastapi %
+
