@@ -2,9 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
+    <title>Emotion Detection Model</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        #typing-animation {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 1s steps(30, end) forwards;
+        }
+    </style>
 </head>
 <body>
-<h1>Hello world</h1>
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">Emotion Detection</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">See how AI can predict the emotions in your image through Machine Learning. The model is only limited to five emotions; Happy, Sad, Angry, Surprised and Neutral Face</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <input type="file" id="fileInput" accept="image/jpeg, image/png" style="display: none;">
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3" id="uploadButton">Upload Image</button>
+        </div>
+    </div>
+</div>
+
+<div id="loading-text" class="px-4 py-5 my-5 text-center" >
+    <p id="typing-animation"></p>
+</div>
+
+<div id="result-section" class="px-4 py-5 my-5 text-center" style="display: none;">
+    <h2>Results:</h2>
+    <div id="result"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script>
+    document.getElementById('uploadButton').addEventListener('click', function () {
+        document.getElementById('fileInput').click();
+    });
+
+    document.getElementById('fileInput').addEventListener('change', function () {
+        const fileInput = this;
+        const file = fileInput.files[0];
+        if (!file) {
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('im', file);
+
+        const typingAnimationElement = document.getElementById('typing-animation');
+        const resultSection = document.getElementById('result-section');
+
+        typingAnimationElement.style.display = 'block';
+        typingAnimationElement.textContent = '';
+
+        const loadingText = 'Loading...';
+
+        function simulateLoading() {
+            setTimeout(() => {
+                fetch('/detect', {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const resultElement = document.getElementById('result');
+                    const htmlContent = `
+                        <p><strong>Emotion:</strong> ${data.emotion}</p>
+                        <p><strong>Time Elapsed (Preprocessing):</strong> ${data.time_elapsed_preprocessing} seconds</p>
+                        <p><strong>Time Elapsed:</strong> ${data.time_elapsed} seconds</p>
+                    `;
+                    resultElement.innerHTML = htmlContent;
+                    typingAnimationElement.style.display = 'none';
+                    resultSection.style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    typingAnimationElement.style.display = 'none';
+                });
+            }, 1000);
+        }
+
+        function typeLoadingText() {
+            let index = 0;
+            const interval = setInterval(() => {
+                typingAnimationElement.textContent += loadingText.charAt(index);
+                index++;
+                if (index === loadingText.length) {
+                    clearInterval(interval);
+                    simulateLoading();
+                }
+            }, 100);
+        }
+
+        typeLoadingText();
+    });
+</script>
 </body>
 </html>
