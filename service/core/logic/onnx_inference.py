@@ -36,7 +36,7 @@ def emotions_detector(img_array):
     time_elapsed_preprocessing = f'{time.time() - time_init:.4f} secs'
     time_elapsed = f'{time.time() - time_init:.4f} secs'
 
-    return {'emotions': emotions,
+    return {'emotion': emotions,
             'time_elapsed_preprocessing': str(time_elapsed_preprocessing),
             'time_elapsed': str(time_elapsed)
             }
