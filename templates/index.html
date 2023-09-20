@@ -22,24 +22,30 @@
     </style>
 </head>
 <body>
-<div class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold text-body-emphasis">Emotion Detection</h1>
-    <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">See how AI can predict the emotions in your image through Machine Learning. The model is only limited to five emotions; Happy, Sad, Angry, Surprised and Neutral Face</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+<div class="container-fluid px-0">
+    <div class="p-3 bg-light text-dark text-center"> <!-- Change bg-primary to bg-light and text-white to text-dark -->
+        <h1 class="display-5 fw-bold">Emotion Detection</h1>
+        <p class="lead mb-4">See how AI can predict the emotions in your image through Machine Learning. The model is only limited to five emotions; Happy, Sad, Angry, Surprised, and Neutral Face</p>
+    </div>
+    <div class="container">
+        <div class="py-4 text-center">
             <input type="file" id="fileInput" accept="image/jpeg, image/png" style="display: none;">
-            <button type="button" class="btn btn-primary btn-lg px-4 gap-3" id="uploadButton">Upload Image</button>
+            <button type="button" class="btn btn-primary btn-lg px-4" id="uploadButton">Upload Image</button>
         </div>
     </div>
 </div>
 
-<div id="loading-text" class="px-4 py-5 my-5 text-center" >
-    <p id="typing-animation"></p>
+<div class="container py-4 text-center">
+    <div id="loading-text">
+        <p id="typing-animation"></p>
+    </div>
 </div>
 
-<div id="result-section" class="px-4 py-5 my-5 text-center" style="display: none;">
-    <h2>Results:</h2>
-    <div id="result"></div>
+<div class="container py-4 text-center">
+    <div id="result-section" style="display: none;">
+        <h2>Results:</h2>
+        <div id="result"></div>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
