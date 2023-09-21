@@ -2,6 +2,9 @@ import cv2
 import numpy as np
 import time
 import service.main as main
+import psutil
+
+cpu_usage = psutil.cpu_percent(interval=1)  # Check every 1 s
 
 
 def emotions_detector(img_array):
@@ -26,7 +29,9 @@ def emotions_detector(img_array):
         time_elapsed_preprocessing = f'{time.time() - time_init:.4f} secs'
 
         # Inference by passing the face to the model
+        print(f"CPU Usage: {cpu_usage}%")
         onnx_pred = main.model.run(['dense'], {'input_image': im})
+        print(f"CPU Usage: {cpu_usage}%")
 
         # Predict emotion
         class_names = ['angry', 'happy', 'neutral', 'sad', 'surprised']
