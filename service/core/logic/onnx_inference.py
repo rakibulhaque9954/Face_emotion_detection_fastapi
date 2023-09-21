@@ -16,7 +16,6 @@ def emotions_detector(img_array):
     # Detect faces in the image
     faces = face_cascade.detectMultiScale(image, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
 
-
     for (x, y, w, h) in faces:
         # Crop and resize the face region for the model/preprocessing
         face = image[y:y + h, x:x + w]
@@ -32,7 +31,6 @@ def emotions_detector(img_array):
         # Predict emotion
         class_names = ['angry', 'happy', 'neutral', 'sad', 'surprised']
         emotion = class_names[np.argmax(onnx_pred[0][0])]
-
 
         time_elapsed = f'{time.time() - time_init:.4f} secs'
 
