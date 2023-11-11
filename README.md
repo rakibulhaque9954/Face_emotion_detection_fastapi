@@ -1,5 +1,7 @@
 # Face Emotion Detection (FastAPI)
 [日本語](https://github.com/rakibulhaque9954/Face_emotion_detection_fastapi/blob/135e72cc144661da34902d55e3643b1ae700abb9/%E6%97%A5%E6%9C%AC%E8%AA%9EREADME.md)
+
+<br>
 Welcome to my Face Emotion Detection project! This application is designed to detect emotions in faces from uploaded images using a combination of Haar Cascade for face detection and a ViT (Vision Transformer) model for emotion prediction. The model has been trained on 5 emotion classes: Happy, Sad, Angry, Surprised, and Neutral.
 
 ## Website Preview
