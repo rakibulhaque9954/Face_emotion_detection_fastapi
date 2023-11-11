@@ -1,6 +1,16 @@
 # Face Emotion Detection (FastAPI)
-
+[日本語](https://github.com/rakibulhaque9954/Face_emotion_detection_fastapi/blob/135e72cc144661da34902d55e3643b1ae700abb9/%E6%97%A5%E6%9C%AC%E8%AA%9EREADME.md)
 Welcome to my Face Emotion Detection project! This application is designed to detect emotions in faces from uploaded images using a combination of Haar Cascade for face detection and a ViT (Vision Transformer) model for emotion prediction. The model has been trained on 5 emotion classes: Happy, Sad, Angry, Surprised, and Neutral.
+
+## Website Preview
+![home page](https://github.com/rakibulhaque9954/Face_emotion_detection_fastapi/blob/cde903776333edd143cc5f8a15da9dd704d452e7/Screenshot%202023-11-11%20at%2018.17.25.png)
+*Home Page*
+<br>
+<img src="https://github.com/rakibulhaque9954/Face_emotion_detection_fastapi/blob/cde903776333edd143cc5f8a15da9dd704d452e7/1000_F_637048304_gG1q9XoPsy17wtqm1rCM8ke3EjENcq5N.jpg" width="400" alt="Sample Happy Image"><br>
+*Test Image(emotion: Happy)*
+<br>
+![Result](https://github.com/rakibulhaque9954/Face_emotion_detection_fastapi/blob/cde903776333edd143cc5f8a15da9dd704d452e7/Screenshot%202023-11-11%20at%2018.18.03.png)
+*Result page*
 
 ## Usage
 
@@ -17,10 +27,11 @@ Welcome to my Face Emotion Detection project! This application is designed to de
 ## Adding Custom Dataset and Kaggle
 
 To enhance model accuracy, I added a custom dataset that includes a combination of Kaggle's dataset and additional custom data. This expanded dataset allowed my model to better understand and classify a wider range of emotions.
+**A val Accuracy of 90% was achieved.**
 
 ## Deployment
 
-This project is hosted on Render, which may impact loading times and stability. Due to the nature of web applications, occasional crashes or slower response times may occur.
+This project is hosted on Render, which may impact loading times and stability. Due to the nature of hosting service, occasional crashes or slower response times may occur.
 
 ## Technologies Used
 
